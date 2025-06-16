@@ -1,0 +1,25 @@
+car_id = ["a", "b", "c"]
+car_number = 0
+
+while car_number < len(car_id):
+    car_label = car_id[car_number]
+    print("Car " + car_label)
+    initial_miles = float(input("Initial miles: "))
+
+    if initial_miles < 0:
+        break
+
+    final_miles = float(input("Final miles: "))
+    gallons = float(input("Gallons: "))
+
+    if final_miles <= initial_miles:
+        print("Invalid number: Final miles must be higher than initial miles.")
+        continue
+    if gallons <= 0:
+        print("Invalid number: Gallons must be higher than zero.")
+        continue
+
+    mpg = (final_miles - initial_miles) / gallons
+    print(mpg)
+
+    car_number += 1
